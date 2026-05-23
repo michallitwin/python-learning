@@ -1,14 +1,20 @@
-class WeatherApp:
-    def __init__(self, provider, saver):
-        self.provider = provider # Twój pracownik od internetu
-        self.saver = saver # Twój pracownik od zapisu na dysk
+class Daily_assistant:
+    def __init__(self, weather_provider, currency_provider, saver):
+        self.weather = weather_provider 
+        self.currency = currency_provider
+        self.saver = saver 
 
 
-    def uruchom(self, location):
-        info = self.provider.get_weather(location)
+    def uruchom(self, category, target):
+        if category == "weather":
+            info = self.weather.get_weather(target)
+            w = info["list"]
+            text = f"Temperature in {target}: {w[0]['main']['temp']} °C"
 
-        w = info["list"]
-        print(f"Temperature: {w[0]['main']['temp']} °C")
+        elif category == "currency":
+            info = self.currency.get_currency(target)
+            exchange = info["rates"][0]["mid"]
+            text = f"Exchange: {target}: {exchange} PLN"
+        
 
-
-        self.saver.save_data(info)
+        self.saver.save_data(text)
