@@ -5,7 +5,7 @@ class Daily_assistant:
         self.saver = saver 
 
 
-    def uruchom(self, category, target):
+    def start(self, category, target):
         if category == "weather":
             info = self.weather.get_weather(target)
             w = info["list"]

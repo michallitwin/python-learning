@@ -9,5 +9,5 @@ class FileSaver(DataSaver):
     def save_data(self, data):
         time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
 
-        with open(self.file_name, "a", encoding="utf-8") as plik:
-            plik.write(f" --- {time} --- {data} \n")
+        with open(self.file_name, "a", encoding="utf-8") as file:
+            file.write(f" --- {time} --- {data} \n")
