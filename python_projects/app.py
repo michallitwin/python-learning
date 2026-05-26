@@ -5,7 +5,7 @@ class Daily_assistant:
         self.saver = saver 
 
 
-    def start(self, category, target):
+    def start_aplication(self, category, target):
         if category == "weather":
             info = self.weather.get_weather(target)
             w = info["list"]

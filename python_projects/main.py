@@ -5,12 +5,12 @@ from app import Daily_assistant
 
 
 def main():
-    first = OpenWeatherMap("x")
-    second = FileSaver("notebook.txt")
+    api = OpenWeatherMap("x")
+    file_save = FileSaver("notebook.txt")
     currency_worker = NbpCurrency()
-    third = Daily_assistant(first,currency_worker,second)
+    assistant = Daily_assistant(api,currency_worker,file_save)
 
-    third.start("currency","EUR")
+    assistant.start_aplication("currency","EUR")
 
 if __name__ == "__main__":
     main()
