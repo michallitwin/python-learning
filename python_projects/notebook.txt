@@ -6,3 +6,4 @@
  --- 2026-05-23 19:48 --- Exchange: CHF: 4.6514 PLN 
  --- 2026-05-23 19:48 --- Exchange: EUR: 4.2453 PLN 
  --- 2026-05-23 19:49 --- Exchange: EUR: 4.2453 PLN 
+ --- 2026-05-26 18:16 --- Exchange: AUD: 2.6072 PLN 

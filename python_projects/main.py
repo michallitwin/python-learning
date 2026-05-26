@@ -10,7 +10,7 @@ def main():
     currency_worker = NbpCurrency()
     assistant = Daily_assistant(api,currency_worker,file_save)
 
-    assistant.start_aplication("currency","AUD")
+    assistant.start_aplication("currency","JPY")
 
 if __name__ == "__main__":
     main()
