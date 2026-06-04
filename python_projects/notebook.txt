@@ -7,3 +7,6 @@
  --- 2026-05-23 19:48 --- Exchange: EUR: 4.2453 PLN 
  --- 2026-05-23 19:49 --- Exchange: EUR: 4.2453 PLN 
  --- 2026-05-26 18:16 --- Exchange: AUD: 2.6072 PLN 
+ --- 2026-06-04 13:57 --- Temperature in Warsaw: 15.72 °C 
+ --- 2026-06-04 14:08 --- Temperature in Warsaw: 17.09 °C 
+ --- 2026-06-04 14:21 --- Exchange: JPY: 0.02288 PLN 

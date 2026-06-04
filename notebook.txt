@@ -1,0 +1,8 @@
+ --- 2026-06-04 13:57 --- Temperature in Warsaw: 15.72 °C 
+ --- 2026-06-04 14:17 --- Temperature in Warsaw: 17.24 °C 
+ --- 2026-06-04 14:17 --- Temperature in Berlin: 23.2 °C 
+ --- 2026-06-04 14:20 --- Exchange: JPY: 0.02288 PLN 
+ --- 2026-06-04 14:21 --- Exchange: JPY: 0.02288 PLN 
+ --- 2026-06-04 14:30 --- Exchange: GBP: 4.9138 PLN 
+ --- 2026-06-04 15:50 --- Crypto: Bitcoin: 63760.0 PLN 
+ --- 2026-06-04 15:53 --- Crypto: Bitcoin: 232174.0 PLN 

@@ -1,20 +1,29 @@
 class Daily_assistant:
-    def __init__(self, weather_provider, currency_provider, saver):
+    def __init__(self, weather_provider, currency_provider, crypto_provider,saver):
         self.weather = weather_provider 
         self.currency = currency_provider
+        self.crypto = crypto_provider
         self.saver = saver 
 
 
-    def start_aplication(self, category, target):
+    def start_aplication(
+            self,
+            category:str,
+            city:str = None, 
+            currency_name:str = None, 
+            crypto_name:str = None):
+        
         if category == "weather":
-            info = self.weather.get_weather(target)
-            w = info["list"]
-            text = f"Temperature in {target}: {w[0]['main']['temp']} °C"
+            info = self.weather.get_weather(city)
+            text = f"Temperature in {city}: {info.temp} °C"
 
         elif category == "currency":
-            info = self.currency.get_currency(target)
-            exchange = info["rates"][0]["mid"]
-            text = f"Exchange: {target}: {exchange} PLN"
+            info = self.currency.get_currency(currency_name)
+            text = f"Exchange: {currency_name}: {info.curr} PLN"
+
+        elif category == "crypto":
+            info = self.crypto.get_crypto(crypto_name)
+            text = f"Crypto: {crypto_name}: {info.crypto} PLN"
         
 
         self.saver.save_data(text)
