@@ -15,15 +15,15 @@ class Daily_assistant:
         
         if category == "weather":
             info = self.weather.get_weather(city)
-            text = f"Temperature in {city}: {info.temp} °C"
-
+            data = {city: info.temp}
+        
+        
         elif category == "currency":
             info = self.currency.get_currency(currency_name)
-            text = f"Exchange: {currency_name}: {info.curr} PLN"
+            data = {currency_name: info.curr}
 
         elif category == "crypto":
             info = self.crypto.get_crypto(crypto_name)
-            text = f"Crypto: {crypto_name}: {info.crypto} PLN"
-        
+            data = {crypto_name: info.crypto }
 
-        self.saver.save_data(text)
+        self.saver.save_data(data)
