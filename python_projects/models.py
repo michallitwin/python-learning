@@ -37,3 +37,6 @@ class CryptoData(BaseModel):
         }
 
 
+class Fear_Greed_Data(BaseModel):
+    value: int
+    value_classification: str

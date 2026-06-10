@@ -1,18 +1,20 @@
 from apscheduler.schedulers.blocking import BlockingScheduler
-from api import OpenWeatherMap, NbpCurrency, CryptoAPI
+from api import OpenWeatherMap, NbpCurrency, CryptoAPI, Fear_Greed
 from storage import TxtSaver, CsvSaver
 from app import Daily_assistant
 
 def run_daily_assistant():
     print("Cron Job: Running Daily Assistant.")
     
-    api = OpenWeatherMap("x")
-    api2 = CryptoAPI("x")
-    file_save = TxtSaver("notebook.txt")
+    weather_api = OpenWeatherMap("x")
+    crypto_api = CryptoAPI("x")
+    file_save = CsvSaver("notebook.csv")
+    feargreed = Fear_Greed()
     currency_worker = NbpCurrency()
-    assistant = Daily_assistant(api, currency_worker, api2, file_save)
+    assistant = Daily_assistant(weather_api, currency_worker, crypto_api, feargreed, file_save)
 
-    assistant.start_aplication(category="crypto", crypto_name="Bitcoin")
+    #weather, currency, crypto, index
+    assistant.start_aplication(category="crypto",crypto_name="Bitcoin")
     print("✅ Task executed successfully.")
 
 scheduler = BlockingScheduler()
