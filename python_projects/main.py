@@ -24,3 +24,6 @@ scheduler.add_job(run_daily_assistant, trigger='cron', minute='*/1')
 print("Python Cron Scheduler started. [Press Ctrl+C to exit]")
 run_daily_assistant()
 scheduler.start()
+
+
+
