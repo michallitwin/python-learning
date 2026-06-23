@@ -12,7 +12,7 @@ def run_daily_assistant():
     assistant = Daily_assistant(weather_api, currency_worker, crypto_api, feargreed, file_save)
 
     #weather, currency, crypto, index
-    assistant.start_aplication(category="crypto",crypto_name="Bitcoin")
+    assistant.start_aplication(category="currency",currency_name="JPY")
 
 
 
