@@ -4,7 +4,7 @@ class Daily_assistant:
         self.currency = currency_provider
         self.crypto = crypto_provider
         self.index = index_provider
-        self.saver = saver 
+        self.saver = saver
 
 
     def start_aplication(
@@ -13,14 +13,14 @@ class Daily_assistant:
             city:str = None, 
             currency_name:str = None,
             crypto_name:str = None):
-        
+
         if category == "weather":
             info = self.weather.get_weather(city)
             data = {
                 "city": city,
                 "temp": info.temp
             }
-        
+
         elif category == "currency":
             info = self.currency.get_currency(currency_name)
             data = {
@@ -39,7 +39,7 @@ class Daily_assistant:
         elif category == "index":
             info = self.index.get_index()
             data = {
-                "fng_value": info.value,                     
-                "fng_classification": info.value_classification  
+                "fng_value": info.value,
+                "fng_classification": info.value_classification
             }
         self.saver.save_data(data)
